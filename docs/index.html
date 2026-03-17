@@ -36,27 +36,32 @@
 
     <header class="hero" id="top">
       <div class="container hero-inner">
-        <p class="hero-badge">ECCV 2026 Project Page</p>
         <h1 class="publication-title">
           <span class="title-accent">Mv2ID</span>: Identity-Consistent Video Generation under Large
           Facial-Angle Variations
         </h1>
 
-        <div class="publication-authors">
-          <span>Anonymous ECCV 2026 Submission</span>
+        <div class="publication-authors author-slot-list">
+          <span class="author-slot"><a href="#">Author One</a><sup>1</sup>,</span>
+          <span class="author-slot"><a href="#">Author Two</a><sup>1</sup>,</span>
+          <span class="author-slot"><a href="#">Author Three</a><sup>2</sup>,</span>
+          <span class="author-slot"><a href="#">Author Four</a><sup>2</sup>,</span>
+          <span class="author-slot"><a href="#">Author Five</a><sup>3</sup>,</span>
+          <span class="author-slot"><a href="#">Author Six</a><sup>1</sup></span>
         </div>
-        <div class="publication-affiliations">Paper ID #939</div>
-        <div class="publication-notes">
-          Multi-view conditioned video generation that balances identity consistency and motion
-          naturalness under in-paired supervision.
+        <div class="publication-affiliations affiliation-slot-list">
+          <span><sup>1</sup>Affiliation One</span>
+          <span><sup>2</sup>Affiliation Two</span>
+          <span><sup>3</sup>Affiliation Three</span>
+        </div>
+        <div class="publication-notes publication-slot-note">
+          Replace the placeholder authors, links, and affiliations with the final public metadata.
         </div>
 
         <div class="publication-links">
-          <a class="link-button" href="#teaser">Teaser</a>
+          <a class="link-button" href="https://github.com/yizhiqianbi/mv2id" target="_blank" rel="noreferrer">Code</a>
+          <a class="link-button" href="assets/paper/mv2id-paper.pdf" target="_blank" rel="noreferrer">Paper</a>
           <a class="link-button" href="#videos">Video</a>
-          <a class="link-button" href="#method">Method</a>
-          <span class="link-button link-button-disabled">Paper Soon</span>
-          <span class="link-button link-button-disabled">Code Soon</span>
         </div>
       </div>
     </header>
@@ -140,34 +145,27 @@
       <section class="section-block" id="method">
         <div class="container narrow-container">
           <h2 class="section-title">Methodology</h2>
-          <figure class="wide-figure">
-            <img
-              src="assets/method/dataset-pipeline.png"
-              alt="Wide pipeline panel showing video processing and pose coverage steps."
-            />
-          </figure>
-          <p class="figure-caption">
-            Overview panel for the data and preprocessing pipeline. This can later be replaced with the
-            final polished method figure from the paper.
-          </p>
+          <div class="method-placeholder method-placeholder-large" role="img" aria-label="Placeholder for the main method figure">
+            <span class="placeholder-kicker">Placeholder</span>
+            <h3>Main Method Figure</h3>
+            <p>Replace this block with the official method overview figure once you send it.</p>
+          </div>
 
           <div class="method-grid">
-            <figure class="method-card">
-              <img
-                src="assets/method/decoupled-rope.png"
-                alt="Illustration of separate token layouts for video tokens and image tokens."
-              />
-            </figure>
+            <div class="method-placeholder method-placeholder-small" role="img" aria-label="Placeholder for an auxiliary method panel">
+              <span class="placeholder-kicker">Placeholder</span>
+              <h3>Auxiliary Panel</h3>
+              <p>Optional inset for module detail, ablation diagram, or training strategy.</p>
+            </div>
             <div class="method-copy">
               <p>
-                Mv2ID uses multi-view identity references without letting any single reference dominate
-                the generation process. The region-masking strategy forces the model to recover identity
-                cues from complementary views instead of memorizing one angle.
+                This section now follows the LHM++ page rhythm: one large method figure first, followed
+                by supporting explanation and an auxiliary visual slot. The current boxes are explicit
+                placeholders so they will not be mistaken for the final paper figure.
               </p>
               <p>
-                The reference-decoupled RoPE module further separates how video tokens and conditioning
-                tokens are encoded, making the temporal structure of the video and the structural layout
-                of the references easier to model together.
+                Once you send the real method image, I can drop it into the large slot, keep the same
+                layout, and tune the caption and spacing around it without changing the rest of the page.
               </p>
             </div>
           </div>
@@ -176,7 +174,19 @@
 
       <section class="section-block" id="results">
         <div class="container narrow-container">
-          <h2 class="section-title">Qualitative Results</h2>
+          <h2 class="section-title">Results</h2>
+          <h3 class="results-subtitle">Primary Comparison</h3>
+          <figure class="wide-figure">
+            <img
+              src="assets/figures/teaser.png"
+              alt="Primary qualitative comparison panel with multi-view references and generated outputs."
+            />
+          </figure>
+          <p class="figure-caption">
+            Primary comparison slot. Replace this with your final main qualitative panel if needed.
+          </p>
+
+          <h3 class="results-subtitle">More Qualitative Cases</h3>
           <div class="results-grid">
             <figure class="result-card">
               <img src="assets/results/result-01.jpg" alt="Qualitative example with white curtains and multi-view references." />
@@ -192,7 +202,14 @@
             </figure>
           </div>
 
-          <h2 class="section-title section-title-spaced">Quantitative Snapshot</h2>
+          <h3 class="results-subtitle">Additional Results Slot</h3>
+          <div class="results-placeholder" role="img" aria-label="Placeholder for additional results content">
+            <span class="placeholder-kicker">Placeholder</span>
+            <h3>Reserve for Extra Results</h3>
+            <p>Add more comparisons, ablations, or failure cases here later.</p>
+          </div>
+
+          <h3 class="results-subtitle">Quantitative Results</h3>
           <figure class="wide-figure">
             <img
               src="assets/figures/user-study.png"
