@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mv2id | Project Page</title>
+    <meta
+      name="description"
+      content="Static GitHub Pages-ready project page for Multi-View Identity-Consistent Video Generation under In-Paired Supervision."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23b2642a'/><text x='50' y='62' text-anchor='middle' font-size='54' font-family='Georgia' fill='white'>M</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero reveal" id="top">
+        <div class="topbar">
+          <a class="brand" href="#top">Mv2id</a>
+          <nav class="section-nav" aria-label="Section navigation">
+            <a href="#overview">Overview</a>
+            <a href="#method">Method</a>
+            <a href="#results">Results</a>
+            <a href="#videos">Videos</a>
+            <a href="#citation">Citation</a>
+          </nav>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">ECCV 2026 Project Page Template</p>
+            <h1>Mv2id: Multi-View Identity-Consistent Video Generation under In-Paired Supervision</h1>
+            <p class="hero-text">
+              A GitHub Pages-ready academic project page scaffold built from the current repository assets.
+              The title and abstract below already come from your draft; author names, institutional links,
+              paper/code URLs, and final videos can be swapped in later without changing the layout.
+            </p>
+
+            <div class="meta-block">
+              <p>Anonymous ECCV 2026 submission</p>
+              <p>Replace this line with author names, affiliations, and equal-contribution notes.</p>
+            </div>
+
+            <div class="hero-actions">
+              <a class="pill" href="#method">Method</a>
+              <a class="pill" href="#results">Qualitative Results</a>
+              <a class="pill" href="#videos">Video Slots</a>
+              <span class="pill pill-muted">Paper PDF link</span>
+              <span class="pill pill-muted">Code link</span>
+            </div>
+          </div>
+
+          <figure class="hero-figure frame-card">
+            <img
+              src="assets/figures/teaser.png"
+              alt="Teaser figure showing multi-view references and generated results across identities."
+            />
+            <figcaption>
+              Teaser figure from the current repo. This is a strong default hero visual for the landing section.
+            </figcaption>
+          </figure>
+        </div>
+      </header>
+
+      <main>
+        <section class="content-section reveal" id="overview">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h2>Abstract</h2>
+          </div>
+          <div class="section-grid section-grid-wide">
+            <article class="text-card">
+              <p>
+                The single-view reference-to-video methods often fail to preserve identity consistency under
+                large facial viewpoint variations. This limitation naturally motivates the incorporation of
+                multi-view facial references. However, simply introducing additional reference images
+                exacerbates the copy-paste problem, particularly the view-dependent copy-paste artifact,
+                which reduces facial motion diversity.
+              </p>
+              <p>
+                To address these challenges, Mv2id improves identity consistency while preserving motion
+                dynamics under in-paired supervision. The framework combines a region-masking training
+                strategy with decoupled positional encoding for video and conditioning tokens, encouraging
+                the model to aggregate complementary identity cues from multiple views instead of collapsing
+                onto a single reference.
+              </p>
+            </article>
+
+            <aside class="info-stack">
+              <article class="info-card">
+                <h3>What This Page Already Has</h3>
+                <p>
+                  Method figures, qualitative results, and a video section with clean placeholders that can
+                  be replaced by MP4, WebM, GIF, or iframe embeds later.
+                </p>
+              </article>
+              <article class="info-card">
+                <h3>What You Should Replace Before Release</h3>
+                <p>
+                  Author metadata, external paper/code links, the BibTeX block, and the placeholder cards in
+                  the videos section.
+                </p>
+              </article>
+            </aside>
+          </div>
+        </section>
+
+        <section class="content-section reveal" id="method">
+          <div class="section-heading">
+            <p class="eyebrow">Method</p>
+            <h2>Core Idea and Training Pipeline</h2>
+          </div>
+
+          <article class="text-card statement-card">
+            <p>
+              Mv2id injects multi-view identity evidence into a video generator without letting the model
+              overfit to one dominant reference. The layout below uses the token-geometry figure to explain
+              the decoupled RoPE idea and a wide pipeline panel to show the broader data construction or
+              conditioning workflow. If you later obtain a more polished method diagram, you can replace one
+              or both images without touching the surrounding structure.
+            </p>
+          </article>
+
+          <div class="media-grid media-grid-method">
+            <figure class="frame-card">
+              <img
+                src="assets/method/decoupled-rope.png"
+                alt="Method illustration for decoupled positional encoding over video tokens and image tokens."
+              />
+              <figcaption>
+                Decoupled token layout for video tokens and image conditioning tokens. This works well as a
+                method-side explanatory figure.
+              </figcaption>
+            </figure>
+
+            <figure class="frame-card wide-card">
+              <img
+                src="assets/method/dataset-pipeline.png"
+                alt="Wide overview image showing the video processing and pose coverage pipeline."
+              />
+              <figcaption>
+                Pipeline-style visual for data processing and large-pose coverage. Replace with your final
+                method or data pipeline figure when ready.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-section reveal" id="results">
+          <div class="section-heading">
+            <p class="eyebrow">Results</p>
+            <h2>Qualitative Comparisons and Quantitative Snapshot</h2>
+          </div>
+
+          <figure class="frame-card feature-card">
+            <img
+              src="assets/figures/teaser.png"
+              alt="Large qualitative teaser showing reference views, generated frames, and pose balance plots."
+            />
+            <figcaption>
+              Large-viewpoint qualitative results already available in the repository. This section can stay
+              exactly as-is or be swapped with your final comparison montage.
+            </figcaption>
+          </figure>
+
+          <div class="media-grid media-grid-results">
+            <figure class="frame-card strip-card">
+              <img src="assets/results/result-01.jpg" alt="Qualitative result strip with multi-view references and generated frames." />
+              <figcaption>Profile-to-occluded transition with stable identity cues.</figcaption>
+            </figure>
+            <figure class="frame-card strip-card">
+              <img src="assets/results/result-02.jpg" alt="Qualitative result strip showing identity preservation in warm lighting." />
+              <figcaption>Warm-light scene with natural facial rotation and appearance retention.</figcaption>
+            </figure>
+            <figure class="frame-card strip-card">
+              <img src="assets/results/result-03.jpg" alt="Qualitative result strip with moving character and side-view references." />
+              <figcaption>Fast pose change with identity preserved across sparse reference views.</figcaption>
+            </figure>
+            <figure class="frame-card strip-card">
+              <img src="assets/results/result-04.jpg" alt="Qualitative result strip showing hospital corridor sequence and multi-view references." />
+              <figcaption>Longer temporal transition without collapsing onto a single conditioning angle.</figcaption>
+            </figure>
+          </div>
+
+          <figure class="frame-card metric-card">
+            <img src="assets/figures/user-study.png" alt="Quantitative bar chart summarizing user study preferences." />
+            <figcaption>
+              Quantitative panel placeholder. The current user-study chart gives the page a more complete
+              paper-site structure until final benchmark figures are available.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="content-section reveal" id="videos">
+          <div class="section-heading">
+            <p class="eyebrow">Videos</p>
+            <h2>Ready-to-Replace Video Slots</h2>
+          </div>
+
+          <article class="text-card statement-card">
+            <p>
+              Each card below is intentionally left as a styled placeholder so you can drop in the final
+              media later. When you have assets, replace the placeholder block with a regular
+              <code>&lt;video controls&gt;</code>, a GIF, or an iframe embed while keeping the same card shell.
+            </p>
+          </article>
+
+          <div class="video-grid">
+            <article class="video-card frame-card">
+              <div class="video-copy">
+                <p class="slot-label">Slot 01</p>
+                <h3>Teaser Video</h3>
+                <p>Use this card for the hero demo video or the main 30-60 second summary clip.</p>
+              </div>
+              <!-- Replace this block with a real <video> element when the teaser video is ready. -->
+              <div class="video-placeholder" role="img" aria-label="Placeholder for teaser video">
+                <div class="play-badge"></div>
+                <p>Drop teaser video here</p>
+                <span>MP4 / WebM / GIF / YouTube embed</span>
+              </div>
+            </article>
+
+            <article class="video-card frame-card">
+              <div class="video-copy">
+                <p class="slot-label">Slot 02</p>
+                <h3>Method Animation</h3>
+                <p>Good for an animated walkthrough of token injection, masking, or decoupled RoPE.</p>
+              </div>
+              <!-- Replace this block with a real <video> element when the method animation is ready. -->
+              <div class="video-placeholder" role="img" aria-label="Placeholder for method animation">
+                <div class="play-badge"></div>
+                <p>Drop method animation here</p>
+                <span>Poster image + short loop recommended</span>
+              </div>
+            </article>
+
+            <article class="video-card frame-card">
+              <div class="video-copy">
+                <p class="slot-label">Slot 03</p>
+                <h3>More Qualitative Cases</h3>
+                <p>Use this block for side-by-side comparisons, longer generations, or failure cases.</p>
+              </div>
+              <!-- Replace this block with a real <video> element when the comparison video is ready. -->
+              <div class="video-placeholder" role="img" aria-label="Placeholder for comparison video">
+                <div class="play-badge"></div>
+                <p>Drop comparison reel here</p>
+                <span>Can be a long qualitative montage</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section reveal" id="citation">
+          <div class="section-heading">
+            <p class="eyebrow">Citation</p>
+            <h2>BibTeX Placeholder</h2>
+          </div>
+
+          <div class="citation-card frame-card">
+            <pre><code>@inproceedings{mv2id2026,
+  title     = {Mv2id: Multi-View Identity-Consistent Video Generation under In-Paired Supervision},
+  author    = {Anonymous},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
+}</code></pre>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <p>Static project page scaffold for GitHub Pages. All displayed media currently lives under <code>docs/assets/</code>.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
